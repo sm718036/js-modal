@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #f24438;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    transition: all 300s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    animation: openModel 1s linear forwards;
+}
+
+.close-model-animation {
+    animation: closeModel 1s linear forwards;
+}
+
+.card {
+    background: white;
+    width: 50rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+#close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.3rem;
+}
+
+.brand {
+    width: 35rem;
+}
+
+.brand img {
+    display: block;
+    width: 100%;
+}
+
+.card h2 {
+    margin-bottom: 2rem;
+}
+
+.card form {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card input[type="email"] {
+    background-color: #eee;
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+}
+
+.card input[type="submit"] {
+    background-color: #f24438;
+    color: white;
+    padding: 0 1.6rem;
+}
+
+@keyframes openModel {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closeModel {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        width: 85vw;
+        text-align: center;
+    }
+
+    .brand {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .card form {
+        display: block;
+    }
+
+    .card input[type="email"],
+    .card input[type="submit"] ::placeholder {
+        text-align: center;
+    }
+
+    .card input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 0.6rem;
+    }
+}
+
+@media (max-width:400px) {
+    .card {
+        flex-direction: column;
+        width: 95vw;
+        text-align: center;
+    }
+
+    .brand {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .card form {
+        display: block;
+    }
+
+    .card input[type="email"],
+    .card input[type="submit"] ::placeholder {
+        text-align: center;
+    }
+
+    .card input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 0.6rem;
+    }
+}
